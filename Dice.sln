@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2048
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetValues", "GetValues\GetValues.csproj", "{A6103CC8-B934-404A-84D3-5A36C838B190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThrowDice", "ThrowDice\ThrowDice.csproj", "{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6103CC8-B934-404A-84D3-5A36C838B190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6103CC8-B934-404A-84D3-5A36C838B190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6103CC8-B934-404A-84D3-5A36C838B190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6103CC8-B934-404A-84D3-5A36C838B190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2244F007-4E52-49AE-973A-CCE4AD9FFDD6}
+	EndGlobalSection
+EndGlobal
