@@ -22,12 +22,12 @@ namespace Dice
             try
             {
                 var lastMessage = queue.GetMessageAsync().Result;
-                lastValue = lastMessage.InsertionTime + " www " + lastMessage.AsString;
+                lastValue = lastMessage.InsertionTime + " qqq " + lastMessage.AsString;
 
                 queue.DeleteMessageAsync(lastMessage).Wait();
 
                 lastMessage = queue.GetMessageAsync().Result;
-                lastValue = lastValue + " - " + lastMessage.InsertionTime + " www " + lastMessage.AsString;
+                lastValue = lastValue + " - " + lastMessage.InsertionTime + " qqq " + lastMessage.AsString;
 
                 queue.DeleteMessageAsync(lastMessage).Wait();
             }
