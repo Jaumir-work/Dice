@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Dice
 {
-    public static class Dice
+    public static class Dice_GetValues
     {
         [FunctionName("GetValues")]
         public static IActionResult GetValues(

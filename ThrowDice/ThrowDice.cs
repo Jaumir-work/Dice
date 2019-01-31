@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Dice
 {
-    public static class Dice
+    public static class Dice_ThrowDice
     {
         [FunctionName("ThrowDice")]
         public static void ThrowDice([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer,
