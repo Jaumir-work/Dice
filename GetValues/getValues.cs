@@ -27,7 +27,7 @@ namespace Dice
                 queue.DeleteMessageAsync(lastMessage).Wait();
 
                 lastMessage = queue.GetMessageAsync().Result;
-                lastValue = lastValue + " - " + lastMessage.InsertionTime + " ccc " + lastMessage.AsString;
+                lastValue = lastValue + " - " + lastMessage.InsertionTime + " cccc " + lastMessage.AsString;
 
                 queue.DeleteMessageAsync(lastMessage).Wait();
             }
