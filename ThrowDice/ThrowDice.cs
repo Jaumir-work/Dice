@@ -8,7 +8,7 @@ namespace Dice
     public static class Dice_ThrowDice
     {
         [FunctionName("ThrowDice")]
-        public static void ThrowDice([TimerTrigger("0 */2 * * * *")]TimerInfo myTimer,
+        public static void ThrowDice([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer,
              [Queue("latestdraw", Connection = "AzureWebJobsStorage")] CloudQueue myQueue,
              ILogger log)
         {
