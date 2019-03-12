@@ -3,18 +3,18 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetValues", "GetValues\GetValues.csproj", "{A6103CC8-B934-404A-84D3-5A36C838B190}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetValues", "AzureCloud\dotnet\GetValues\GetValues.csproj", "{A6103CC8-B934-404A-84D3-5A36C838B190}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThrowDice", "ThrowDice\ThrowDice.csproj", "{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThrowDice", "AzureCloud\dotnet\ThrowDice\ThrowDice.csproj", "{8DB1A680-BF85-4029-80E9-A6A1EA78F92A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{67899B8C-421E-4B26-B0DF-6686D3E579D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "AzureCloud\dotnet\Solution Items", "{67899B8C-421E-4B26-B0DF-6686D3E579D7}"
 	ProjectSection(SolutionItems) = preProject
 		Dice-identity.txt = Dice-identity.txt
 		FaaSAppContext.json = FaaSAppContext.json
 		FaaSContext.json = FaaSContext.json
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice", "Dice\Dice.csproj", "{B086C2A8-F64C-4D53-9EFE-3F31630D6900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice", "AzureCloud\dotnet\Dice\Dice.csproj", "{B086C2A8-F64C-4D53-9EFE-3F31630D6900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
