@@ -1,19 +1,18 @@
 var azStorage = require("azure-storage")
 
-process.env["AZURE_STORAGE_CONNECTION_STRING"] = process.env["AzureWebJobsStorage"]
+var connString = 
+"DefaultEndpointsProtocol=https;AccountName=mcostorageaccount;AccountKey=2jveh9j8dngPBttcZ3VKtNqz+eCTBiWGw4MQTLHgLGC0f8qFA9/xCjJK4MkyXVisw9GaYaGEpeHzkOMxFp63Kw==;EndpointSuffix=core.windows.net"
 
-module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+module.exports.GetValuesNodeJs = async function(req, res) {
 
     var resultReturn = "--"
     var resultCode = 500
 
     function endFunction () {
-        context.bindings.httpResponse = {status: resultCode, body: resultReturn}
-        // context.res.end()
+            res.status(resultCode).send(resultReturn)
     }
 
-    var queueSvc = azStorage.createQueueService();
+    var queueSvc = azStorage.createQueueService(connString);
 
     queueSvc.messageEncoder = new azStorage.QueueMessageEncoder.TextBase64QueueMessageEncoder();
 

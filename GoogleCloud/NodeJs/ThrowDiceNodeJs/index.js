@@ -1,10 +1,19 @@
 var azStorage = require("azure-storage")
-process.env["AZURE_STORAGE_CONNECTION_STRING"] = process.env["AzureWebJobsStorage"]
 
-module.exports = async function (context, myTimer) {
+var connString = 
+"DefaultEndpointsProtocol=https;AccountName=mcostorageaccount;AccountKey=2jveh9j8dngPBttcZ3VKtNqz+eCTBiWGw4MQTLHgLGC0f8qFA9/xCjJK4MkyXVisw9GaYaGEpeHzkOMxFp63Kw==;EndpointSuffix=core.windows.net"
+
+module.exports.ThrowDiceNodeJs = async function (req, res) {
+
+    var resultReturn = "Added --"
+    var resultCode = 500
+
+    function endFunction () {
+            res.status(resultCode).send(resultReturn)
+    }
 
     var timeStamp = new Date().toISOString();
-    var queueSvc = azStorage.createQueueService();
+    var queueSvc = azStorage.createQueueService(connString);
 
     queueSvc.messageEncoder = new azStorage.QueueMessageEncoder.TextBase64QueueMessageEncoder();
 
@@ -18,11 +27,17 @@ module.exports = async function (context, myTimer) {
                     var newDraw2 = (Math.floor(Math.random() * 7 )).toString()
 
                     queueSvc.createMessage('latestdraw', newDraw1, function(error, results){
-                        if(!error){resolve(true);}
+                        if(!error){
+                            resultReturn = resultReturn + newDraw1
+                            resultCode = 201
+                            resolve(true);}
                         else{reject(error)}
                     })
                     queueSvc.createMessage('latestdraw', newDraw2, function(error, results){
-                        if(!error){resolve(true);}
+                        if(!error){
+                            resultReturn = resultReturn + " -- " + newDraw2
+                            resultCode = 202
+                            resolve(true);}
                         else{reject(error)}
                     })
                 }
@@ -33,10 +48,11 @@ module.exports = async function (context, myTimer) {
         })
     }
 
-    context.log('JavaScript timer trigger function running!', timeStamp);
+    console.log('JavaScript function running!', timeStamp);
 
     await addMessagestWaitable()
 
-    context.log('JavaScript timer trigger function finished', timeStamp);
+    console.log('JavaScript function finished', timeStamp);
 
+    endFunction()
 };

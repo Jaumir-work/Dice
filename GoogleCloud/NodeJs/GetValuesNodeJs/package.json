@@ -1,0 +1,11 @@
+{
+  "name": "getvaluesnodejs",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "azure-storage": "2.10.2"
+  }
+}
